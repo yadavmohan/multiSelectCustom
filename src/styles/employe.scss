@@ -1,0 +1,406 @@
+$commonRedColor: #e11800;
+$lightgrey: #c1c1c1;
+$whiteColor: #ffffff;
+$blackColor: #000000;
+$lighblackColor : #212121;
+.common-button-style {
+  background-color: $commonRedColor;
+  border-radius: 20px;
+  color: $whiteColor;
+  font-size: 15px;
+  text-align: center;
+  border: 0;
+  padding: 10px 0;
+  min-width: 180px;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background-color: $blackColor;
+  }
+}
+.employe-main-component {
+  .top-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: $commonRedColor;
+    text-align: center;
+    padding: 8px 0;
+    z-index: 1;
+  }
+  .page-heading {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin: 20px 50px;
+  }
+  .employe-body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .add-employee-button {
+    @extend .common-button-style;
+    position: absolute;
+    right: 0;
+    top: 13px;
+  }
+  .emp-table {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid $lightgrey;
+    border-radius: 6px 6px 0 0;
+    .emp-header {
+      display: flex;
+      background-color: $lightgrey;
+      color: $lighblackColor;
+      border-radius: 6px 6px 0 0;
+      padding: 5px 10px;
+      font-weight: 600;
+      font-size: 16px;
+      box-sizing: border-box;
+      width: 100%;
+      border-bottom: 1px solid $lighblackColor;
+    }
+    .name-header,
+    .data-name {
+      flex: 0 0 30%;
+    }
+    .age-header,
+    .data-age {
+      flex: 0 0 10%;
+    }
+    .sex-header,
+    .data-sex {
+      flex: 0 0 10%;
+    }
+    .state-header,
+    .data-state {
+      flex: 0 0 25%;
+    }
+    .fruites-header,
+    .data-fruties {
+      flex: 0 0 25%;
+    }
+    .emp-data-body {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          display: flex;
+          text-transform: capitalize;
+          border-bottom: 1px solid $lightgrey;
+          padding: 5px 10px;
+          font-size: 13px;
+          font-weight:400;
+          &:last-child {
+            border-bottom: 0;
+          }
+          &:hover {
+            background-color: $lightgrey;
+          }
+          span {
+            text-transform: capitalize;
+            display: inline-block;
+            margin: 0 3px;
+          }
+        }
+      }
+    }
+  }
+  .add-employee-form {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    .employee-form-body {
+      background-color: $whiteColor;
+      width: 500px;
+      position: relative;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius:4px;
+      display: table;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      .close-modal {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .add-employee-heading {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $blackColor;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  .input-style {
+    border: 1px solid $lightgrey;
+    padding: 7px 10px;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .form-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    .row-label {
+      flex: 0 0 30%;
+      font-size: 13px;
+    }
+    .row-filds {
+      flex: 0 0 70%;
+    }
+  }
+  .dropdown-filter {
+    position: relative;
+    width: 100%;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: $whiteColor;
+      width: 100%;
+      li {
+        text-transform: capitalize;
+      }
+      &.seleced-list-top {
+        position: absolute;
+        z-index: 3;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+  .select-datalist {
+    border: 1px solid $lightgrey;
+    padding: 2px 30px 2px 0;
+  }
+  .search-apilist {
+    font-size: 13px;
+    li {
+      padding: 3px;
+      &:hover {
+        background-color: $lightgrey;
+      }
+    }
+  }
+  .down-arrow {
+    background-color: #333333;
+    font-size: 22px;
+    color: $whiteColor;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    z-index: 4;
+  }
+  .serach-input-placeholder {
+    position: relative;
+    .serach-input {
+      pointer-events: none;
+      width: 100%;
+      outline: none;
+      border: 0;
+      padding: 0 0 0 10px;
+      font-size: 14px;
+    }
+  }
+  .select-datalist {
+    ul {
+      li {
+        background-color: $lighblackColor;
+        color: $whiteColor;
+        font-size: 12px;
+        display: inline-block;
+        padding: 2px 5px;
+        border-radius: 20px;
+      }
+    }
+  }
+  .multi-main-filter {
+    position: relative;
+  }
+  .multi-select-dropdown {
+    background-color: $whiteColor;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(209, 202, 209, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(209, 202, 209, 1);
+    box-shadow: 0px 0px 5px 0px rgba(209, 202, 209, 1);
+    width: 100%;
+    border: 1px solid $lightgrey;
+    position: absolute;
+    top: 36px;
+    z-index: 6;
+    border-top: 0;
+    .optionlist {
+      max-height: 100px;
+      overflow-y: scroll;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 5px;
+        li {
+          text-transform: capitalize;
+          font-size: 12px;
+          padding: 5px 0;
+          label {
+            cursor: pointer;
+          }
+          &:hover {
+            background-color: #dcdada;
+          }
+        }
+      }
+      .dropdown-label-text {
+        line-height: normal;
+        margin-left: 5px;
+        vertical-align: top;
+      }
+    }
+  }
+  .multiSearch-fields {
+    width: 100%;
+    position: relative;
+    border: 1px solid $lightgrey;
+    height: 36px;
+    .input-feilds {
+      color: $lightgrey;
+      font-size: 13px;
+      padding: 8px 10px;
+      height: 36px;
+      line-height: normal;
+    }
+    .selectedInput {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      width: 100%;
+      .seleced-list-top {
+        list-style: none;
+        margin: 0;
+        padding: 3px 5px;
+        display: inline-flex;
+        gap: 2px;
+        flex-wrap: wrap;
+        li {
+          font-size: 12px;
+          background-color: $commonRedColor;
+          color: $whiteColor;
+          border-radius: 20px;
+          text-transform: capitalize;
+          padding: 5px 8px;
+          line-height: normal;
+          .delete-selected-values {
+            padding: 5px;
+          }
+        }
+      }
+      .count-length {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
+    .dropdown-arrow {
+      position: absolute;
+      top: 0;
+      padding: 10px 0;
+      right: 0;
+      z-index: 4;
+      width: 34px;
+      height: 34px;
+      color: $blackColor;
+      font-size: 10px;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: $commonRedColor;
+        color: $whiteColor;
+        &::before {
+          background-color: transparent;
+        }
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 20px;
+        width: 1px;
+        background-color: $lightgrey;
+        left: 0;
+        top: 7px;
+        position: absolute;
+      }
+    }
+  }
+  .innersearch-input {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(225, 24, 0, 1);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(225, 24, 0, 1);
+    box-shadow: 0px 0px 5px 1px rgba(225, 24, 0, 1);
+  }
+  .gender-button {
+    margin-right: 15px;
+    cursor: pointer;
+    font-size:13px;
+  }
+  .top-header-errorMessage{
+    color:$commonRedColor;
+    font-size:13px;
+    display: block;
+    margin-bottom:10px;
+  }
+
+  .form-submit-button {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px;
+  }
+  .search-filter {
+    padding: 10px 5px 0;
+    position: relative;
+    span {
+      position: absolute;
+      top: 15px;
+      font-size: 14px;
+      cursor: pointer;
+      right: 15px;
+    }
+  }
+  .no-record-text {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .askrik-mark{
+    color:$commonRedColor;
+  }
+  .submit-button {
+    @extend .common-button-style;
+    &.disabledClass{
+        cursor: not-allowed;
+        background-color: $lightgrey;
+        &:hover{
+            background-color: $lightgrey;
+        }
+    }
+  }
+}
